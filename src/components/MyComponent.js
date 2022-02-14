@@ -1,6 +1,5 @@
-import Title from "./Title.js";
+import Title from "./Title";
 
-export default function MyComponent (){
-    return <Title title="It Works!" />
-
+export default function MyComponent( {title}) {
+    return <Title title={title} />
 }

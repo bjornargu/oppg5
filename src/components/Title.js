@@ -1,3 +1,3 @@
-export default function Title(props){
-    return <h1>{props.title}</h1>
+export default function Title( {title} ) {
+    return <h1>{title}</h1>
 }
