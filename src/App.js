@@ -7,7 +7,11 @@ import Wrapper from "./components/Wrapper";
 
 
 const App = () => {
-  // const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState('');
+  const [click, setClick] = useState(false);
+  const handleInput = (e) => {setInputValue(e.target.value)}
+  const handleClick = () => {setClick(!click)}
+
 
 return(  
   <div>
@@ -16,8 +20,9 @@ return(
       <MyComponent title="It works"/>
     </Wrapper>
     <Food food={['Pizza', 'Hamburger', 'Coke']} />
-    <Alert />
-    {/* <p>{inputValue}</p> */}
+    <Alert inputValue={inputValue} handleInput={handleInput} handleClick={handleClick} />
+    <p>{click ? inputValue : null}</p>
+    {console.log(click)}
   </div>
 
   )
