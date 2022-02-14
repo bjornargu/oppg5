@@ -22,7 +22,6 @@ return(
     <Food food={['Pizza', 'Hamburger', 'Coke']} />
     <Alert inputValue={inputValue} handleInput={handleInput} handleClick={handleClick} />
     <p>{click ? inputValue : null}</p>
-    {console.log(click)}
   </div>
 
   )
